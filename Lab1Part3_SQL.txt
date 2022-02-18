@@ -1,0 +1,44 @@
+CREATE TABLE Student (
+	StudentID int NOT NULL IDENTITY(1,1),
+	FirstName VARCHAR(50),
+	LastName VARCHAR(50),
+	EmailAddress VARCHAR(50),
+	PhoneNumber VARCHAR(50),
+	ExpectedGradYear VARCHAR(50),
+	Major VARCHAR(50),
+	UniversityYear VARCHAR(50),
+	InternshipStatus VARCHAR(50),
+	EmploymentStatus VARCHAR(50),
+	CONSTRAINT studentid_pk PRIMARY KEY (StudentID)
+);
+
+INSERT INTO Student(FirstName, LastName, EmailAddress, PhoneNumber, ExpectedGradYear, Major, UniversityYear, InternshipStatus, EmploymentStatus)
+VALUES ('Bill', 'Nye', 'dk@gmail.com', '(703)-213-4556', '2026', 'CIS','Freshman','False','False');
+
+INSERT INTO Student(FirstName, LastName, EmailAddress, PhoneNumber, ExpectedGradYear, Major, UniversityYear, InternshipStatus, EmploymentStatus)
+VALUES ('John', 'Johnson', 'jj@gmail.com', '(703)-321-4586', '2025', 'Marketing','Sophmore','False','False');
+
+INSERT INTO Student(FirstName, LastName, EmailAddress, PhoneNumber, ExpectedGradYear, Major, UniversityYear, InternshipStatus, EmploymentStatus)
+VALUES ('Octavious', 'Frost', 'of@gmail.com', '(571)-222-0928', '2024', 'Nursing','Junior','False','False');
+
+INSERT INTO Student(FirstName, LastName, EmailAddress, PhoneNumber, ExpectedGradYear, Major, UniversityYear, InternshipStatus, EmploymentStatus)
+VALUES ('Chloe', 'Kim', 'ck@gmail.com', '(703)-954-9999', '2023', 'Quantitative Finance','Senior','True','False');
+
+
+CREATE TABLE Scholarship (
+	ScholarshipID int NOT NULL IDENTITY(1,1),
+	ScholarshipName VARCHAR(50),
+	ScholarshipYear VARCHAR(50),
+	ScholarshipAmount VARCHAR(50),
+	CoordName VARCHAR(50),	
+	CONSTRAINT scholarshipid_pk PRIMARY KEY (ScholarshipID)
+);
+
+Insert INTO Scholarship(ScholarshipName, ScholarshipYear, ScholarshipAmount, CoordName)
+VALUES('Duke Award','2022','$20,000','DukeGroup');
+Insert INTO Scholarship(ScholarshipName, ScholarshipYear, ScholarshipAmount, CoordName)
+VALUES('Dean Award','2022','$10,000','DukeGroup');
+Insert INTO Scholarship(ScholarshipName, ScholarshipYear, ScholarshipAmount, CoordName)
+VALUES('Scholar Award','2022','$5,000','DukeGroup');
+Insert INTO Scholarship(ScholarshipName, ScholarshipYear, ScholarshipAmount, CoordName)
+VALUES('Hartman Award','2022','$30,000','DukeGroup');
