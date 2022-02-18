@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Lab1_Part3_DillonKrein.MasterPage" %>
+<!--
+Dillon Krein
+2-11-2022
+Asp code for Master page. Logo and links on top and an additional set of links on the bottom
+-->
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        h1{
+        font-weight:700;
+        color:darkslateblue;
+        }
+        div{
+            align-content:normal;
+            align-items:flex-start;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div>    
+            
+            <a href="HomePage.aspx"><asp:Image ID="DukeLogo" runat="server" ImageUrl="/images/dukedog.png" Width="150" Height="150" ></asp:Image></a>
+            <asp:Label ID="DukeGroup" runat="server" Text="DukeGroup" Font-Bold="true" Font-Size="300%" Font-Underline="true"
+                 ForeColor="DarkViolet" ></asp:Label>
+            &emsp;&emsp;
+            <a href="HomePage.aspx">Home</a>&emsp;
+            <a href="StudentPage.aspx">Student</a>&emsp;
+            <a href="ScholarshipPage.aspx">Scholarship</a> 
+            <br />
+            <t1>==================================================================================</t1>
+            <t2>Dillon Krein</t2>
+            
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        <div>
+            <p>==================================================================================</p>            
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<asp:Label ID="Label1" runat="server" Text="Proudly supporting our Dukes!" Font-Bold="true" Font-Size="150%" Font-Underline="true"
+                 ForeColor="DarkViolet" ></asp:Label>
+            &emsp;&emsp;
+            <a href="HomePage.aspx">Home</a>&emsp;
+            <a href="StudentPage.aspx">Student</a>&emsp;
+            <a href="ScholarshipPage.aspx">Scholarship</a> 
+            <p>==================================================================================</p>
+        </div>
+    </form>
+</body>
+</html>
